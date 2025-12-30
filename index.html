@@ -3,12 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>WeddingOS | O Sistema Operacional do seu Casamento</title>
-    <meta name="description" content="Não é uma planilha. Não é um app genérico. É o centro de comando financeiro e organizacional do seu casamento." />
+    <meta
+      name="description"
+      content="Não é uma planilha. Não é um app genérico. É o centro de comando financeiro e organizacional do seu casamento."
+    />
+
+    <!-- Tailwind via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind Config -->
     <script>
       tailwind.config = {
         theme: {
@@ -18,17 +31,19 @@
             },
             colors: {
               brand: {
-                dark: '#0B1120', // Deep Navy/Petrol
-                surface: '#151E32', // Slightly lighter surface
-                accent: '#06B6D4', // Cyan
+                dark: '#0B1120',
+                surface: '#151E32',
+                accent: '#06B6D4',
                 purple: '#8B5CF6',
                 success: '#10B981',
                 warning: '#F59E0B',
-              }
+              },
             },
             backgroundImage: {
-              'hero-glow': 'conic-gradient(from 90deg at 50% 50%, #00000000 50%, #0B1120 50%), radial-gradient(rgba(139, 92, 246, 0.3) 0%, transparent 50%)',
-              'glass': 'linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%)',
+              'hero-glow':
+                'conic-gradient(from 90deg at 50% 50%, #00000000 50%, #0B1120 50%), radial-gradient(rgba(139, 92, 246, 0.3) 0%, transparent 50%)',
+              glass:
+                'linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%)',
             },
             transitionTimingFunction: {
               'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
@@ -40,48 +55,56 @@
               scroll: {
                 '0%': { transform: 'translateX(0)' },
                 '100%': { transform: 'translateX(-100%)' },
-              }
-            }
-          }
-        }
-      }
+              },
+            },
+          },
+        },
+      };
     </script>
+
+    <!-- Global styles -->
     <style>
       body {
-        background-color: #0B1120;
-        color: #F8FAFC;
+        background-color: #0b1120;
+        color: #f8fafc;
         overflow-x: hidden;
       }
+
       .gradient-text {
-        background: linear-gradient(to right, #22D3EE, #8B5CF6);
+        background: linear-gradient(to right, #22d3ee, #8b5cf6);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
+
       .glass-card {
         background: rgba(21, 30, 50, 0.6);
         backdrop-filter: blur(12px);
         border: 1px solid rgba(255, 255, 255, 0.08);
       }
-      /* Pause animation on hover */
+
       .pause-on-hover:hover {
         animation-play-state: paused;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "recharts": "https://esm.sh/recharts@^3.6.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+
+    <!-- Import map -->
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@^19.2.3",
+          "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+          "react/": "https://esm.sh/react@^19.2.3/",
+          "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+          "recharts": "https://esm.sh/recharts@^3.6.0"
+        }
+      }
+    </script>
+  </head>
+
   <body>
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+
+    <!-- ✅ ENTRY POINT CORRETO -->
+    <script type="module" src="/src/index.tsx"></script>
+  </body>
 </html>
