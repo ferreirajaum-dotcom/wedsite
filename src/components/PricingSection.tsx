@@ -83,7 +83,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
         <div className="mb-8 text-center bg-white/5 rounded-2xl p-6 border border-white/5 group-hover:border-white/10 transition-colors">
           <div className="flex items-center justify-center gap-1 mb-2">
             <span className="text-lg text-slate-500 font-medium translate-y-[-8px]">R$</span>
-            <span className="text-6xl md:text-7xl font-bold text-white tracking-tighter">{price}</span>
+            <span className="text-6xl md:text-7xl font-bold text-white tracking-tighter">69,99</span>
             <span className="text-lg text-slate-500 self-end mb-2">{period}</span>
           </div>
 
@@ -152,7 +152,7 @@ const PricingSection: React.FC = () => {
           <PricingCard 
             title="WeddingOS Premium"
             description="Acesso ilimitado a todas as ferramentas de Inteligência Artificial e gestão financeira."
-            price="39,99"
+            price="69,99"
             period="/mês"
             fidelityText="Sem fidelidade. Cancele quando quiser."
             highlight="orange"
