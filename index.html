@@ -104,6 +104,25 @@
   <body>
     <div id="root"></div>
 
+    <!-- SCRIPT WHATSAPP CTA (SEM ALTERAR LAYOUT OU REACT) -->
+    <script>
+      document.addEventListener('click', function (event) {
+        const target = event.target.closest('button, a');
+        if (!target) return;
+
+        if (
+          target.innerText &&
+          target.innerText.trim() === 'COMEÇAR AGORA COM ACESSO TOTAL'
+        ) {
+          event.preventDefault();
+          window.open(
+            'https://wa.me/5581992237111?text=Hey%20tudo%20bem%3F%20Gostaria%20de%20adquirir%20o%20App%20WeddingOS%20para%20organizar%20meu%20casamento%20para%20que%20n%C3%A3o%20seja%20um%20caos%20financeiro.%20Pode%20me%20auxiliar%3F',
+            '_blank'
+          );
+        }
+      });
+    </script>
+
     <!-- ✅ ENTRY POINT CORRETO -->
     <script type="module" src="/src/index.tsx"></script>
   </body>
